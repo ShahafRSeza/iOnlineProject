@@ -1,0 +1,150 @@
+nav {
+  background-color: white;
+  min-height: 80px;
+}
+
+.logoImg {
+  width: 120px;
+}
+
+.userResponsiveNav {
+  display: none;
+}
+
+.active {
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+.nav-link {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.navBtn {
+  border: 1px solid #777;
+  background-color: #fff;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.signUpBtn {
+  border: 1px solid rgb(42, 42, 42);
+  padding: 12px 50px;
+  border-radius: 40px;
+  text-decoration: none;
+  background: #000000;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+
+.signUpBtn:hover {
+  box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
+  background: #2b2a2a;
+}
+
+.signUpBtn .icon {
+  opacity: 0;
+  position: relative;
+  left: -8px;
+  transition: all 0.5s;
+}
+
+.signUpBtn:hover .icon {
+  opacity: 1;
+  position: relative;
+  left: 5px;
+  transition: all 0.5s;
+}
+
+.loginBtn {
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.loginBtn:hover {
+  opacity: 1;
+  background-color: rgb(236, 236, 236);
+  transition: all 0.5s;
+}
+
+.userName {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+.adminBtn,
+.userName,
+.bag {
+  border: 1px solid rgb(42, 42, 42);
+  padding: 10px 16px;
+  border-radius: 40px;
+  text-decoration: none;
+  background: #000000;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  text-transform: capitalize;
+}
+
+.userName:hover {
+  background-color: #000000;
+}
+
+.logOutBtn {
+  border: 1px solid rgb(42, 42, 42);
+  padding: 10px 16px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+.logOutBtn:hover {
+  opacity: 1;
+  background-color: rgb(233, 233, 233);
+  transition: all 0.5s;
+}
+
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsiveNavBtn {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  nav {
+    min-height: 50px;
+  }
+
+  .userResponsiveNav {
+    order: 3;
+    display: block;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .navbar-toggler {
+    order: 1;
+  }
+}

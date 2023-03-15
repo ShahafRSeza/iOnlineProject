@@ -1,0 +1,110 @@
+.carousel {
+  height: 360px;
+  background-image: url("/public/images/bannerBg.png");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.carouselImg {
+  width: 53%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  user-select: none;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.text {
+  height: 250px;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  font-weight: 500;
+  z-index: 199;
+  color: white;
+}
+
+button {
+  border: 1px solid white;
+  background: transparent;
+  font-weight: 500;
+  font-size: 10pt;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span .icon {
+  content: "f0546";
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  transition: all 0.5s;
+}
+
+button:hover span {
+  padding-right: 20px;
+}
+
+button:hover span .icon {
+  opacity: 1;
+  right: 0;
+}
+
+.bg {
+  font-size: 120pt;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.151);
+  position: absolute;
+  bottom: -60px;
+  z-index: 0;
+  user-select: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel {
+    width: 100%;
+    height: 400px;
+    background-image: url("/public/images/bannerBgResponsive.png");
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .carouselImg {
+    width: 75%;
+    right: 0%;
+  }
+
+  .text {
+    margin: 40px 10px;
+    height: 150px;
+  }
+
+  .bg {
+    color: rgba(255, 255, 255, 0.3) !important;
+    bottom: -30px !important;
+    font-size: 60pt !important;
+  }
+}
