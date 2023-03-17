@@ -1,0 +1,35 @@
+.pnfPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.pnf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.pnf img {
+  width: 200px;
+  margin: -50px;
+}
+
+.pnf p {
+  font-size: 220px;
+  color: #6582ab;
+  font-weight: 800;
+  letter-spacing: -20px;
+}
+
+.pngText {
+  line-height: 0;
+}
+
+.pnfPage button:hover {
+  background-color: black;
+  color: white;
+}

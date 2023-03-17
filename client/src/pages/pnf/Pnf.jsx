@@ -1,21 +1,21 @@
+import "./pnf.css";
+import { useNavigate } from "react-router-dom";
 function Pnf() {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="container main d-flex flex-column justify-content-center align-items-center">
-        <div className="text-center text-danger">
-          <h1 className="fw-bold">
-            <strong>Error 404 - Page Not Found</strong>
-          </h1>
-          <h5>
-            the page you were trying to reach on a website couldn't be found on
-            the server
-          </h5>
-        </div>
-        <div className="text-center mt-4 mb-4">
-          <button
-            className="btn btn-dark"
-            onClick={() => window.history.back()}
-          >
+      <div className="container">
+        <div className="pnfPage">
+          <div className="pnf">
+            <p>4</p>
+            <img
+              src="https://i.postimg.cc/fygSnQQx/Starlight-Aluminum-Blue.png"
+              alt="watch"
+            />
+            <p>4</p>
+          </div>
+          <p className="pngText">The page you’re looking for can’t be found.</p>
+          <button className="bttn" onClick={() => navigate(-1)}>
             Go Back
           </button>
         </div>

@@ -8,7 +8,6 @@ import { MdSecurity } from "react-icons/md";
 import { AiFillApple } from "react-icons/ai";
 import { TbTruck } from "react-icons/tb";
 import { RiCustomerService2Line } from "react-icons/ri";
-
 import Magnifier from "react-magnifier";
 import { errorMsg, successMsg } from "../../services/feedbackService";
 
@@ -41,30 +40,17 @@ const ProductDetails = () => {
   const background = {
     SpaceBlack: "rgb(130, 130, 130)",
     Silver: "rgb(226, 226, 226)",
-    Gold: "rgb(255, 229, 168)",
-    DeepPurple: "rgb(113, 124, 242)",
+    Gold: "#ead6b4",
+    DeepPurple: "#534f77",
     Blue: "rgb(212, 231, 253)",
-    Purple: "rgb(185, 177, 255)",
-    Yellow: "rgb(234, 234, 140)",
+    Purple: "#b9b1c5",
+    Yellow: "#f7cb57",
     Green: "rgb(229, 239, 222)",
     Midnight: "rgb(189, 189, 189)",
-    Starlight: "rgb(191, 190, 159)",
+    Starlight: "#e1d6ce",
     Red: "rgb(255, 205, 205)",
   };
   const backgroundColor = background[products.color];
-
-  const addComma = (num) => {
-    if (num && num >= 1000) {
-      const numString = num.toString();
-      const firstPart = numString.slice(0, 1);
-      const secondPart = numString.slice(1);
-      return `${firstPart},${secondPart}`;
-    } else if (num !== undefined && num !== null) {
-      return num.toString();
-    } else {
-      return "";
-    }
-  };
 
   return (
     <>
@@ -125,7 +111,7 @@ const ProductDetails = () => {
           <div className="d-flex my-4 justify-content-between align-items-center">
             <p className="price">
               Price
-              <span>${addComma(products.price)}</span>
+              <span>${products.price}</span>
             </p>
             <div>
               {products.quantityInStock < 1 ? (

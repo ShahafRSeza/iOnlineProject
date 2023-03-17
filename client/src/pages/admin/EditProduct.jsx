@@ -69,8 +69,8 @@ function EditProduct() {
         </span>
       </h1>
       <form onSubmit={formik.handleSubmit} className="px-5">
-        <div class="row">
-          <div class="col-lg-7 col-sm-12">
+        <div className="row">
+          <div className="col-lg-7 col-sm-12">
             <div className="mb-3">
               <label htmlFor="title" className="form-label">
                 Product Name
@@ -164,7 +164,7 @@ function EditProduct() {
                   <option value="Green">Green</option>
                   <option value="Midnight">Midnight</option>
                   <option value="Starlight">Starlight</option>
-                  <option value="RED">(PRODUCT)RED</option>
+                  <option value="Red">Red</option>
                 </optgroup>
               </select>
               {formik.touched.color && formik.errors.color ? (

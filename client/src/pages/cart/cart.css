@@ -1,17 +1,18 @@
 .cartCategory {
   color: grey;
   font-weight: 400;
-  line-height: 1;
+  line-height: 0;
+  margin-bottom: 2px;
 }
 
 .cartProductTitle,
 .cartPrice p {
+  margin-top: 0;
   font-size: 16pt;
-  line-height: 0;
 }
 
 .cartImg {
-  width: 100%;
+  width: 50px;
 }
 
 .cartPrice p {
@@ -20,17 +21,31 @@
 
 .orderSummary {
   border-radius: 10px;
-  background-color: #ececec;
-}
-
-.sum {
-  font-weight: 700;
-}
-
-.orderSummary {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: 10px solid black;
   position: sticky;
   top: 30px;
   height: fit-content;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.orderSummary p {
+  color: grey;
+  font-weight: 500;
+}
+
+.sum {
+  font-weight: 700 !important;
+  color: black !important;
+}
+
+.total {
+  color: black !important;
+  font-weight: 700 !important;
+}
+.off25 {
+  color: red !important;
 }
 
 .cartInput {
@@ -40,6 +55,7 @@
   padding: 5px 10px;
   border-radius: 10px;
   transition: all 0.5s;
+  border: 1px solid rgb(204, 204, 204);
 }
 .cartInput:hover,
 .cartInput:focus {
@@ -49,6 +65,22 @@
 .cartInput:focus {
   outline: none;
   border: 1px solid grey;
+}
+
+.couponBtn {
+  border: 1px solid black;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.couponBtn:hover {
+  background-color: black;
+  opacity: 1;
+}
+
+.couponBtn:disabled {
+  opacity: 0.2;
 }
 
 @media only screen and (max-width: 767px) {
@@ -61,5 +93,12 @@
 
   .cartColor {
     display: none;
+  }
+
+  .cartProductTitle,
+  .cartPrice p {
+    font-size: 10pt;
+    line-height: normal;
+    line-break: auto;
   }
 }

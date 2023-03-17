@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+
 .productsHeader {
   margin-bottom: 20px;
   align-items: center;
@@ -58,7 +60,7 @@
 
 .products {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   gap: 22px;
   flex-wrap: wrap;
 }
@@ -162,6 +164,86 @@
 .policy span {
   display: inline;
   font-size: 10pt;
+}
+
+.filter {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #a5a5a5;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.filter span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+.checkBox [type="checkbox"] {
+  display: absolute;
+}
+.checkBox [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkboxBtn:hover {
+  border-color: #777;
+  color: #777;
+}
+
+.selectColors input[type="checkbox"]:checked + label {
+  border: 1px solid #212529;
+  background-color: #212529;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.selectColors input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(360deg);
+  transition: transform 0.1s;
+}
+
+.selectColors label {
+  display: inline-block;
+  width: 139px !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(139, 139, 139, 0.3);
+  color: #adadad;
+  border-radius: 40px;
+  white-space: nowrap;
+  margin: 0 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+}
+
+.selectColors label {
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.selectColors label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f00d";
+  transition: transform 0.3s;
+}
+
+.selectColors:last-child {
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 767px) {

@@ -1,14 +1,9 @@
 nav {
-  background-color: white;
   min-height: 80px;
 }
 
 .logoImg {
   width: 120px;
-}
-
-.userResponsiveNav {
-  display: none;
 }
 
 .active {
@@ -82,7 +77,8 @@ nav {
 .adminBtn,
 .userName,
 .bag {
-  border: 1px solid rgb(42, 42, 42);
+  outline: 1px solid rgb(42, 42, 42);
+  border: none;
   padding: 10px 16px;
   border-radius: 40px;
   text-decoration: none;
@@ -91,6 +87,8 @@ nav {
   color: white;
   transition: all 0.5s;
   text-transform: capitalize;
+  height: 40px;
+  line-height: 0;
 }
 
 .userName:hover {
@@ -126,25 +124,78 @@ nav {
   align-items: center;
 }
 
-.responsiveNavBtn {
+.bag {
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
-  nav {
-    min-height: 50px;
-  }
-
-  .userResponsiveNav {
-    order: 3;
+@media only screen and (max-width: 990px) {
+  .bag {
     display: block;
   }
-
-  .logo {
-    order: 2;
+  .bag {
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 40px;
+    padding: 0;
+    text-decoration: none;
+    background: #000000;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    text-transform: capitalize;
   }
 
-  .navbar-toggler {
-    order: 1;
+  .user {
+    flex-direction: row-reverse;
+  }
+
+  .bagDesktop {
+    display: none;
+  }
+
+  .logOutBtn,
+  .adminBtn {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bag {
+    display: block;
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 40px;
+    padding: 0;
+    text-decoration: none;
+    background: #000000;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    text-transform: capitalize;
+  }
+
+  .user {
+    flex-direction: row-reverse;
+  }
+
+  .bagDesktop {
+    display: none;
+  }
+
+  .logOutBtn,
+  .adminBtn {
+    width: 50%;
+    text-align: center;
+  }
+
+  .loginRegisterGroup {
+    width: 100%;
+  }
+
+  .loginRegisterGroup .signUpBtn {
+    width: 50%;
+  }
+
+  .loginRegisterGroup .loginBtn {
+    width: 50%;
   }
 }

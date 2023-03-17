@@ -46,8 +46,8 @@ function AddProduct() {
         <span className="mx-5 addProductsTitle">Add New Product</span>
       </h1>
       <form onSubmit={formik.handleSubmit} className="px-5">
-        <div class="row">
-          <div class="col-lg-7 col-sm-12">
+        <div className="row">
+          <div className="col-lg-7 col-sm-12">
             <div className="mb-3">
               <label htmlFor="title" className="form-label">
                 Product Name
@@ -128,6 +128,9 @@ function AddProduct() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               >
+                <option value="" disabled>
+                  Choose
+                </option>
                 <optgroup label="Pro/Max Collection">
                   <option value="SpaceBlack">Space Black</option>
                   <option value="Silver">Silver</option>
@@ -141,7 +144,7 @@ function AddProduct() {
                   <option value="Green">Green</option>
                   <option value="Midnight">Midnight</option>
                   <option value="Starlight">Starlight</option>
-                  <option value="RED">(PRODUCT)RED</option>
+                  <option value="Red">RED</option>
                 </optgroup>
               </select>
               {formik.touched.color && formik.errors.color ? (

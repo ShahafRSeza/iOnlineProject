@@ -2,15 +2,6 @@ import "./card.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Card = (props) => {
-  // const categoryColors = {
-  //   Mac: "red",
-  //   iPad: "green",
-  //   iPhone: "blue",
-  //   Watch: "purple",
-  //   Accessories: "orange",
-  // };
-  // const backgroundColor = categoryColors[props.category] || "blue";
-
   const navigate = useNavigate();
 
   const addComma = (num) => {

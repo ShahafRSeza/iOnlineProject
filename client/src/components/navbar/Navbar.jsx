@@ -84,124 +84,131 @@ function Navbar(props) {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg ">
-      <div className="container-fluid">
-        <div className="userResponsiveNav">
-          {isLogged ? (
-            <button className="userName" onClick={() => navigate("/cart")}>
-              {cart.length ? <>{cart.length}</> : null}
-              <FiShoppingBag />
-            </button>
-          ) : null}
-        </div>
-        <NavLink className="logo navbar-brand" to="/">
-          <img src="/images/Logo.png" alt="iOnline Logo" className="logoImg" />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mb-2 mb-lg-0 mx-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/Mac">
-                Mac
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/iPad">
-                iPad
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/iPhone">
-                iPhone
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/Watch">
-                Watch
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/Accessories">
-                Accessories
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/About">
-                About
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="user d-flex gap-2">
+    <>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <NavLink className="logo navbar-brand" to="/">
+            <img
+              src="/images/Logo.png"
+              alt="iOnline Logo"
+              className="logoImg"
+            />
+          </NavLink>
+          <div class="bag">
             {isLogged ? (
-              <>
-                <span>
-                  {isLogged ? (
-                    <button
-                      className="userName"
-                      onClick={() => navigate("/cart")}
+              <button className="userName" onClick={() => navigate("/cart")}>
+                {cart.length ? <>{cart.length}</> : null}
+                <FiShoppingBag />
+              </button>
+            ) : null}
+          </div>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/Mac">
+                  Mac
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/iPad">
+                  iPad
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/iPhone">
+                  iPhone
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/Watch">
+                  Watch
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/Accessories">
+                  Accessories
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link" to="/About">
+                  About
+                </NavLink>
+              </li>
+            </ul>
+            <div className="account">
+              <div className="user d-flex gap-2 justify-content-between">
+                {isLogged ? (
+                  <>
+                    <span>
+                      {isLogged ? (
+                        <button
+                          className="userName bagDesktop"
+                          onClick={() => navigate("/cart")}
+                        >
+                          {cart.length ? <>{cart.length}</> : null}
+                          <FiShoppingBag />
+                          {storedUserDetails}'s Bag
+                        </button>
+                      ) : null}
+                    </span>
+                    <OverlayTrigger
+                      placement="bottom"
+                      delay={{ show: 150, hide: 100 }}
+                      overlay={logout}
                     >
-                      {cart.length ? <>{cart.length}</> : null}
-                      <FiShoppingBag />
-                      {storedUserDetails}'s Bag
+                      <button
+                        onClick={() => confirmAlert(options)}
+                        className="logOutBtn"
+                      >
+                        <RiShutDownLine fontSize={"16pt"} />
+                      </button>
+                    </OverlayTrigger>
+                    {userDetails.isAdmin ? (
+                      <OverlayTrigger
+                        placement="bottom"
+                        delay={{ show: 150, hide: 100 }}
+                        overlay={adminPanel}
+                      >
+                        <NavLink to={"/admin"} className="adminBtn">
+                          <BsPersonLock color="white" fontSize={"1pt"} />
+                        </NavLink>
+                      </OverlayTrigger>
+                    ) : null}
+                  </>
+                ) : (
+                  <div className="loginRegisterGroup d-flex gap-3">
+                    <button
+                      className="navBtn signUpBtn"
+                      onClick={() => navigate("/SignUp")}
+                    >
+                      Sign Up
+                      <FiChevronRight className="icon" />
                     </button>
-                  ) : null}
-                </span>
-                <OverlayTrigger
-                  placement="bottom"
-                  delay={{ show: 150, hide: 100 }}
-                  overlay={logout}
-                >
-                  <button
-                    onClick={() => confirmAlert(options)}
-                    className="logOutBtn"
-                  >
-                    <RiShutDownLine fontSize={"16pt"} />
-                  </button>
-                </OverlayTrigger>
-                {userDetails.isAdmin ? (
-                  <OverlayTrigger
-                    placement="bottom"
-                    delay={{ show: 150, hide: 100 }}
-                    overlay={adminPanel}
-                  >
-                    <NavLink to={"/admin"} className="adminBtn">
-                      <BsPersonLock color="white" fontSize={"16pt"} />
-                    </NavLink>
-                  </OverlayTrigger>
-                ) : null}
-              </>
-            ) : (
-              <>
-                <button
-                  className="navBtn signUpBtn"
-                  onClick={() => navigate("/SignUp")}
-                >
-                  Sign Up
-                  <FiChevronRight className="icon" />
-                </button>
-                <button
-                  className="navBtn loginBtn"
-                  onClick={() => navigate("/Login")}
-                >
-                  Login
-                </button>
-              </>
-            )}
+                    <button
+                      className="navBtn loginBtn"
+                      onClick={() => navigate("/Login")}
+                    >
+                      Login
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 

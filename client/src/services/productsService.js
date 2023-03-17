@@ -41,3 +41,15 @@ export const deleteProduct = (product) => {
     headers: { Authorization: `${sessionStorage.getItem("token")}` },
   });
 };
+
+// global function to add comma if the number bigger than 999
+export const addCommas = (number) => {
+  var numberStr = number.toString();
+  var chars = numberStr.split("");
+  chars.reverse();
+  for (var i = 3; i < chars.length; i += 4) {
+    chars.splice(i, 0, ",");
+  }
+  var result = chars.reverse().join("");
+  return result;
+};
