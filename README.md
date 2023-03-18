@@ -20,8 +20,8 @@ soon
 
 ## Dependencies used
 
-Frontend: React-icons, React-router-dom, React-magnifier, React-confirm-alert, Tostify, Formik, Yup and JWT Decode, Web-vitals.
-Backend: Bcrypt, Joi, JsonWebToken, Lodash, Axios, Cors, Dotenv, MongoDB and Mongoose.
+**Frontend**: React-icons, React-router-dom, React-magnifier, React-confirm-alert, Tostify, Formik, Yup and JWT Decode, Web-vitals.
+**Backend**: Bcrypt, Joi, JsonWebToken, Lodash, Axios, Cors, Dotenv, MongoDB and Mongoose.
 
 ### Clone Repository
 
