@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ceb6f9a.css",
+    "main.js": "/static/js/main.35e50d68.js",
+    "static/media/bannerBg.png": "/static/media/bannerBg.2c6e5ce4cb4736d5b955.png",
+    "static/media/ThirdBannerBgResponsive.png": "/static/media/ThirdBannerBgResponsive.6638471fd155f196aee6.png",
+    "static/media/ThirdBannerBg.png": "/static/media/ThirdBannerBg.0be70deccd40f3471c97.png",
+    "static/media/SecondBannerBg.png": "/static/media/SecondBannerBg.f452284411a1cc0c0791.png",
+    "static/media/SecondBannerBgResponsive.png": "/static/media/SecondBannerBgResponsive.f94da48be7777b61d7f0.png",
+    "static/media/bannerBgResponsive.png": "/static/media/bannerBgResponsive.70c629fd4a7f75a94de9.png",
+    "static/media/ForthBannerBgResponsive.jpg": "/static/media/ForthBannerBgResponsive.1d9cfad2208d3d3ae8e8.jpg",
+    "static/media/iPadsBannerBg.jpeg": "/static/media/iPadsBannerBg.4847b192b9548abff493.jpeg",
+    "static/media/FirstBannerBg.png": "/static/media/FirstBannerBg.9aa560c984b5fca08308.png",
+    "static/media/FirstBannerBgResponsive.png": "/static/media/FirstBannerBgResponsive.0c5d036adae9dc6e0f3c.png",
+    "static/media/Bag.jpeg": "/static/media/Bag.1c5ccfd69b9043d9fa77.jpeg",
+    "index.html": "/index.html",
+    "main.2ceb6f9a.css.map": "/static/css/main.2ceb6f9a.css.map",
+    "main.35e50d68.js.map": "/static/js/main.35e50d68.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ceb6f9a.css",
+    "static/js/main.35e50d68.js"
+  ]
+}
