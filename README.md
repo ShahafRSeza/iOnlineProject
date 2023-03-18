@@ -6,7 +6,7 @@
 
 soon
 
-## Screenshots
+![Thumbnail](https://i.postimg.cc/QdLSGRGj/Untitled-1.jpg)
 
 soon
 
