@@ -5,6 +5,7 @@ import "./products.css";
 import { BsSearch } from "react-icons/bs";
 import Loading from "../../components/loading/Loading";
 import NoProductFound from "../../components/noProductFound/NoProductFound";
+import { BiColorFill } from "react-icons/bi";
 
 const Products = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -50,7 +51,7 @@ const Products = ({ category }) => {
     <>
       {isLoading ? (
         <div className="row my-4">
-          <div className="col-lg-3">
+          <div className="col-lg-3 sticky">
             <h1 className="productsTitle">{category}</h1>
             <div className="searchInput">
               <BsSearch />
@@ -64,25 +65,48 @@ const Products = ({ category }) => {
               />
             </div>
 
-            <p className="filter mt-4">
-              <span>Filter By Color</span>
-            </p>
-            <div className="selectColors d-flex justify-content-between gap-2 flex-wrap">
-              {Object.keys(colors).map((color) => (
-                <span key={color} className="checkBox">
-                  <input
-                    type="checkbox"
-                    id={color}
-                    value={color}
-                    onChange={() => handleCategoryChange(color)}
-                  />
-                  <label className="checkboxBtn" htmlFor={color}>
-                    {color}
-                  </label>
-                </span>
-              ))}
+            <div className="accordion" id="accordionExample">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingOne">
+                  <button
+                    className="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <BiColorFill className="icon" /> Filter By Color
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#e2e2e2ordionExample"
+                >
+                  <div className="mt-2">
+                    <ul className="row">
+                      {Object.keys(colors).map((color) => (
+                        <li key={color} className="checkBox col-md-6">
+                          <input
+                            type="checkbox"
+                            id={color}
+                            value={color}
+                            onChange={() => handleCategoryChange(color)}
+                          />
+                          <label className="checkboxBtn" htmlFor={color}>
+                            {color}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="col">
             <div className="products">
               {products && products.length > 0

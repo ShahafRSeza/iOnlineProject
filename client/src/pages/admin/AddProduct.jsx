@@ -20,7 +20,7 @@ function AddProduct() {
       quantityInStock: "",
     },
     validationSchema: yup.object({
-      title: yup.string().required().min(2),
+      title: yup.string().required().min(2).max(41),
       category: yup.string().required(),
       price: yup.number().required().min(2, "plese insernt price"),
       description: yup.string().required().min(6),

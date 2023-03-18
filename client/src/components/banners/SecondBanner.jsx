@@ -8,7 +8,10 @@ const SecondBanner = () => {
     <div className="container banner2">
       <div className="d-flex">
         <div>
-          <h1 className="bannersTitle">Apple Watch</h1>
+          <h1 className="title">
+            Apple
+            <br /> Watch
+          </h1>
           <button className="smallBtn" onClick={() => navigate("/watch")}>
             <span>
               See More

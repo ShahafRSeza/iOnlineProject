@@ -106,7 +106,7 @@ const ProductDetails = () => {
                 </td>
               </tr>
               <tr>
-                <th>Intrested</th>
+                <th>Views</th>
                 <td>
                   <span>
                     <PageVisitCounter />

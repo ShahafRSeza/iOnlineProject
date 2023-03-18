@@ -1,8 +1,8 @@
-import "./carousel.css";
+import "./mainBanner.css";
 import { FiChevronRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-const Carousel = () => {
+const MainBanner = () => {
   const navigate = useNavigate();
   return (
     <div className="container carousel">
@@ -10,10 +10,8 @@ const Carousel = () => {
         <div className="text">
           <h1 className="title">Be Pro. and Beyond.</h1>
           <p>
-            <strong>
-              The all-new iPhone 14 Pro & iPhone 14 Pro Max <br />
-              Available now from $999
-            </strong>
+            The all-new iPhone 14 Pro & iPhone 14 Pro Max <br />
+            Available now from $999
           </p>
           <p className="moreInfo">
             The iPhone 14 Pro/Max series delivers an exceptional user experience
@@ -33,4 +31,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default MainBanner;

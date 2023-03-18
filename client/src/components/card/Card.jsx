@@ -1,5 +1,5 @@
 import "./card.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
   const navigate = useNavigate();
@@ -17,31 +17,19 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <div className="imageBox">
-        <img src={props.image} />
+      <div
+        className="imageBox"
+        onClick={() => navigate(`/products/${props._id}`)}
+      >
+        <img src={props.image} className="productImageCard" />
       </div>
-      <div className="content">
-        <div className="details">
-          <h2 onClick={() => navigate(`/products/${props._id}`)}>
-            {props.title}
-            <span
-              style={{ color: props.quantityInStock > 1 ? "green" : "red" }}
-            >
-              {props.quantityInStock > 1 ? "IN STOCK" : "OUT OF STOCK"}{" "}
-            </span>
-          </h2>
-          <div className="actionBtn">
-            <div>
-              <span>price</span>
-              <h3>${addComma(props.price)}</h3>
-            </div>
-            <button
-              onClick={() => navigate(`/products/${props._id}`)}
-              className="overviewBtn"
-            >
-              Overview
-            </button>
-          </div>
+      <div className="contentCard">
+        <div
+          className="details"
+          onClick={() => navigate(`/products/${props._id}`)}
+        >
+          <h2>{props.title}</h2>
+          <p>$ {addComma(props.price)}</p>
         </div>
       </div>
     </div>

@@ -31,6 +31,38 @@
   -webkit-text-fill-color: transparent;
 }
 
+.mouse {
+  margin: 30px 0;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 60px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
 .section2 {
   margin: 0 auto;
   width: 100%;
@@ -40,7 +72,7 @@
   background-color: #ffffff;
   padding: 10px;
   border-radius: 10px;
-  min-width: 360px;
+  min-width: 32%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: 0.5s;
@@ -53,12 +85,99 @@
   opacity: 1;
 }
 
+.aboutMe .me {
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whyProject {
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  height: fit-content;
+}
+
+.aboutMe .whyProject {
+  height: fit-content;
+  text-align: left;
+  position: relative;
+}
+
+.aboutMe .aboutProject {
+  border-radius: 10px;
+  background-color: rgb(247, 247, 247);
+  height: fit-content;
+  padding: 10px;
+}
+
+.hiFive {
+  width: 80px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  user-select: none;
+}
+
+.lightbulb {
+  width: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: -10px;
+  user-select: none;
+}
+
+.aboutMe .me h2 {
+  text-align: left;
+  font-weight: 700;
+  margin: 20px 0;
+  background-image: linear-gradient(90deg, #5548e9, #ec787f, #fa8e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.whyProject h2 {
+  font-weight: 700;
+  padding: 20px 0 0 23px;
+  background-image: linear-gradient(90deg, #5548e9, #ec787f, #fa8e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutMe p {
+  text-align: left;
+  font-size: 12pt;
+}
+
+.aboutMe .me span {
+  font-weight: 600;
+  display: block;
+}
+.avatarOnMac {
+  width: 150px;
+  user-select: none;
+}
+
 @media only screen and (max-width: 767px) {
   .section1 h1 {
     font-size: 36pt;
   }
+
+  .aboutMe .me {
+    margin: 0 13px;
+  }
   .section2 .col {
     margin-top: 20px;
     min-width: 350px;
+  }
+
+  .hiFive {
+    width: 80px;
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    user-select: none;
   }
 }

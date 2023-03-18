@@ -1,4 +1,4 @@
-import Carousel from "../../components/carousel/Carousel";
+import MainBanner from "../../components/mainBanner/MainBanner";
 import FirstBanner from "../../components/banners/FirstBanner";
 import SecondBanner from "../../components/banners/SecondBanner";
 import "./home.css";
@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="row">
         <div className="col-12 col-lg-9">
-          <Carousel />
+          <MainBanner />
         </div>
         <div className="col col-lg-3 col-md-6 banners">
           <FirstBanner />

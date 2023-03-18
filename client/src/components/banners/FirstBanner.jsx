@@ -8,7 +8,10 @@ const FirstBanner = () => {
     <div className="container banner1">
       <div className="d-flex">
         <div>
-          <h1 className="bannersTitle">MacBook Pro 13”</h1>
+          <h1 className="title">
+            MacBook
+            <br /> Pro 13
+          </h1>
           <button className="smallBtn" onClick={() => navigate("/mac")}>
             <span>
               See More

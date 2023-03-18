@@ -40,7 +40,7 @@ function EditProduct() {
     },
     enableReinitialize: true,
     validationSchema: yup.object({
-      title: yup.string().required().min(2),
+      title: yup.string().required().min(2).max(41),
       category: yup.string().required(),
       price: yup.number().required(),
       color: yup.string().required().min(2),

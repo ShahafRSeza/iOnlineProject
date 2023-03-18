@@ -7,7 +7,7 @@ const Cart = require("../models/Cart");
 // Product Schema
 const productSchema = joi.object({
   productId: joi.string(),
-  title: joi.string().required().min(2),
+  title: joi.string().required().min(2).max(41),
   category: joi.string().required().min(2),
   color: joi.string().required().min(2),
   price: joi.number().required().min(2),

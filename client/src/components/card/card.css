@@ -1,128 +1,118 @@
 .card {
-  position: relative;
   width: 300px;
   height: 195px;
-  background: #fff;
+  background: #efefef;
   border-radius: 10px;
-  transition: 0.5s;
-}
-
-.card:hover {
-  height: 350px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.05);
-  border-color: #8b8b8b;
+  transition: 0.5s all;
+  border: none;
+  margin-bottom: 20px;
 }
 
 .imageBox {
   position: absolute;
-  left: 50%;
-  top: -10%;
+  top: 5px !important;
   transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   transition: 0.5s;
   user-select: none;
-}
-.card:hover .imageBox {
-  width: 250px;
-  height: 250px;
-}
-
-.imageBox img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 10px;
-}
-
-.card .content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-}
-
-.card .content .details {
-  padding: 20px;
-  width: 100%;
-  transition: 00.5s;
-  transform: translateY(67px);
-}
-
-.card:hover .content .details {
-  transform: translateY(0px);
-}
-
-.card .content .details h2 {
-  font-size: 1.25em;
-  font-weight: 600;
-  color: #555;
-  text-align: center;
-  line-height: 1.2em;
+  z-index: 10;
   cursor: pointer;
 }
 
-.card .content .details h3 {
-  font-size: 1.25em;
-  font-weight: 600;
-  color: #555;
-  line-height: 1.2em;
+.imageBox .productImageCard {
+  position: absolute;
+  top: 20px;
+  left: -15%;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  padding: 10px;
+  transition: 0.5s all;
+}
+
+.card:hover {
+  background: #dcdcdc;
+}
+
+.card:hover .productImageCard {
+  padding: 0;
+  top: 5px;
+  left: -15%;
+}
+
+.contentCard {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: #ffffff;
+}
+
+.contentCard .details {
   text-align: center;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
 }
 
-.card .content .details h2 span {
-  display: block;
-  font-size: 0.6em;
-  font-weight: 600;
-  opacity: 0.5;
+.contentCard .details h2 {
+  font-size: 11pt;
+  font-weight: 300;
+  color: rgb(91, 91, 91);
+  padding: 0;
+  margin: 0;
 }
 
-.card .content .details .actionBtn {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-}
-
-.actionBtn div span {
-  text-align: left;
-  text-transform: uppercase;
-  opacity: 0.4;
-  font-size: 0.7rem;
+.contentCard .details p {
+  font-size: 11pt;
+  color: black;
   font-weight: 700;
-}
-
-.overviewBtn {
-  border-color: #555;
-  color: #555;
-  opacity: 0.5;
-}
-
-.overviewBtn:hover {
-  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
   .card {
-    width: 184px;
+    width: 46%;
+    height: 160px;
   }
 
-  .card .details {
-    margin-top: 90px !important;
+  .imageBox .productImageCard {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+    transition: 0.5s all;
   }
 
-  .card .content .details h2 {
-    font-size: 1em;
+  .card:hover .productImageCard {
+    top: 0;
+    left: 0;
   }
 
-  .card .content .details h3 {
-    font-size: 1em;
+  /* .card .imageBox {
+    width: 120px;
+    height: 120px;
   }
 
-  .overviewBtn {
-    transform: scale(0.9);
+  .card .imageBox .productImageCard {
+    top: 20px;
   }
+
+  .card:hover .productImageCard {
+    width: 120px;
+    height: 120px;
+    left: 0;
+    padding: 0;
+    top: -1px;
+  }
+
+  .contentCard .details {
+    text-align: center;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+  } */
 }

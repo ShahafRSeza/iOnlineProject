@@ -6,7 +6,7 @@ const Product = require("../models/Product");
 
 // Product Scehema of Joi
 const productSchema = joi.object({
-  title: joi.string().required().min(2),
+  title: joi.string().required().min(2).max(41),
   category: joi.string().required().min(2),
   price: joi.number().required().min(2),
   description: joi.string().required().min(6),
