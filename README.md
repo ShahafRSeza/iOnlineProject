@@ -6,9 +6,9 @@
 
 soon
 
-![Thumbnail](https://i.postimg.cc/QdLSGRGj/Untitled-1.jpg)
+## Screenshots
 
-soon
+![Thumbnail](https://i.postimg.cc/QdLSGRGj/Untitled-1.jpg)
 
 ## Stacks
 
