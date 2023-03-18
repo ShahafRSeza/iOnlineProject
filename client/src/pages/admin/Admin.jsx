@@ -13,7 +13,6 @@ import { BsSearch } from "react-icons/bs";
 import { FiEdit2, FiDelete } from "react-icons/fi";
 import { UserContext } from "../../App";
 import { GrAddCircle } from "react-icons/gr";
-import isLoading from "../../components/loading/Loading";
 import Loading from "../../components/loading/Loading";
 
 function Admin() {
@@ -99,15 +98,14 @@ function Admin() {
     <>
       {isLoading ? (
         <>
-          {" "}
           <div className="row mb-4">
             <div className="col-md-4">
-              <h2>Admin Panel</h2>
+              <h2 className="productsTitle">Admin Panel</h2>
               <p className="text-capitalize">
                 Welcome Back, {userDetails.name}
               </p>
             </div>
-            <div className="col-md-8 d-flex justify-content-between ms-auto gap-3">
+            <div className="col-md-8 d-flex justify-content-between ms-auto gap-3 adminDetails">
               <div
                 className="col adminCard addProductBtn"
                 onClick={() => navigate("/addProduct")}
@@ -145,7 +143,7 @@ function Admin() {
             </div>
             <div className="col col-lg-6 d-flex justify-content-end ms-auto">
               <ul className="checkCategory">
-                <span>Sort: </span>
+                <span className="sort">Sort: </span>
                 {Object.keys(categories).map((category) => (
                   <li key={category}>
                     <input

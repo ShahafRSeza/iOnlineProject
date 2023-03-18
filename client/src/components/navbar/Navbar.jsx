@@ -10,19 +10,16 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
-
 import "./navbar.css";
 import { errorMsg, successMsg } from "../../services/feedbackService";
 
-function Navbar(props) {
+function Navbar() {
   const setToken = useContext(TokenContext);
   const userDetails = useContext(UserContext);
   const storedUserDetails = localStorage.getItem("userName");
   const isLogged = sessionStorage.getItem("token");
   const navigate = useNavigate();
   const [cart, setCart] = useState("");
-  const cartChange = props.cartChange;
-  const cartRender = props.cartRender;
   const [isChanged, setIsChanged] = useState(false);
 
   // Handle logout, clear storage, redirect.
@@ -85,19 +82,26 @@ function Navbar(props) {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+          <label className="hamburger">
+            <input
+              type="checkbox"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            />
+            <svg viewBox="0 0 32 32">
+              <path
+                className="line line-top-bottom"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              ></path>
+              <path className="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+
           <NavLink className="logo navbar-brand" to="/">
             <img
               src="/images/Logo.png"
@@ -105,42 +109,44 @@ function Navbar(props) {
               className="logoImg"
             />
           </NavLink>
-          <div class="bag">
-            {isLogged ? (
+          {isLogged ? (
+            <div className="bag">
               <button className="userName" onClick={() => navigate("/cart")}>
                 {cart.length ? <>{cart.length}</> : null}
                 <FiShoppingBag />
               </button>
-            ) : null}
-          </div>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-              <li class="nav-item">
+            </div>
+          ) : (
+            <div></div>
+          )}
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/Mac">
                   Mac
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/iPad">
                   iPad
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/iPhone">
                   iPhone
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/Watch">
                   Watch
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/Accessories">
                   Accessories
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/About">
                   About
                 </NavLink>
@@ -181,7 +187,7 @@ function Navbar(props) {
                         overlay={adminPanel}
                       >
                         <NavLink to={"/admin"} className="adminBtn">
-                          <BsPersonLock color="white" fontSize={"1pt"} />
+                          <BsPersonLock color="white" fontSize={"16pt"} />
                         </NavLink>
                       </OverlayTrigger>
                     ) : null}

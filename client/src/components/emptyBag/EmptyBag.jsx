@@ -3,7 +3,7 @@ import "./emptybag.css";
 function EmptyBag() {
   return (
     <>
-      <div className="container bagBg">
+      <div className="container bagBg mb-5">
         <h1>Your Shopping Bag is empty</h1>
       </div>
     </>

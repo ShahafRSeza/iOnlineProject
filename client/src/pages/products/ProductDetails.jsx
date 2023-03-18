@@ -10,6 +10,7 @@ import { TbTruck } from "react-icons/tb";
 import { RiCustomerService2Line } from "react-icons/ri";
 import Magnifier from "react-magnifier";
 import { errorMsg, successMsg } from "../../services/feedbackService";
+import OtherProducts from "../../components/otherProducts/OtherProducts";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -78,7 +79,6 @@ const ProductDetails = () => {
                 </span>
               )}
             </p>
-            <PageVisitCounter />
           </div>
           <h1>{products.title}</h1>
           <p>{products.description}</p>
@@ -105,6 +105,14 @@ const ProductDetails = () => {
                   )}
                 </td>
               </tr>
+              <tr>
+                <th>Intrested</th>
+                <td>
+                  <span>
+                    <PageVisitCounter />
+                  </span>
+                </td>
+              </tr>
             </tfoot>
           </table>
 
@@ -116,7 +124,7 @@ const ProductDetails = () => {
             <div>
               {products.quantityInStock < 1 ? (
                 <button className="orderBtn text-uppercase" disabled>
-                  Out Of Stock - Check Again Later
+                  Out Of Stock
                 </button>
               ) : isLogged ? (
                 <a
@@ -165,6 +173,10 @@ const ProductDetails = () => {
               </span>
             </div>
           </div>
+        </div>
+        <div className="moreProducts mb-3">
+          <h4 className="text-center">You may also like this items</h4>
+          <OtherProducts />
         </div>
       </div>
     </>

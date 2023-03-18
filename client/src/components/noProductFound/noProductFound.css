@@ -1,0 +1,48 @@
+.noProductFound {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.sorry {
+  width: 120px;
+  animation: comeIn 1s;
+  opacity: 1;
+}
+
+.sorry2 {
+  width: 250px;
+  animation: comeIn 1s;
+  opacity: 0;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.waiting {
+  margin-top: 10px;
+  width: 70px;
+  opacity: 0;
+  animation: flash 2s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes comeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

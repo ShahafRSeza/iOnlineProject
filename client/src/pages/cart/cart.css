@@ -83,7 +83,25 @@
   opacity: 0.2;
 }
 
+.hr {
+  border-bottom: 1px solid #777;
+}
+
 @media only screen and (max-width: 767px) {
+  .cart tbody td:last-child {
+    max-width: 30px !important;
+  }
+
+  .cart tbody .bttn {
+    margin: 0 !important;
+    border: none;
+    padding: 0;
+  }
+  .cart tbody .deleteBtn:hover {
+    color: black !important;
+    background-color: transparent !important;
+  }
+
   .cartImg {
     width: 50px;
   }

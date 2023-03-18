@@ -8,3 +8,17 @@ nav {
   z-index: 99;
   background-color: transparent;
 }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}

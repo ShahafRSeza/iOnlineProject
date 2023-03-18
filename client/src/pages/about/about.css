@@ -1,0 +1,64 @@
+.aboutUs {
+  text-align: center;
+}
+
+.section1 {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.section1 h6 {
+  margin-top: 50px;
+  line-height: 0;
+  font-weight: 600;
+}
+
+.section1 h1 {
+  line-height: 1;
+  font-size: 40pt;
+  font-weight: 600;
+  background-image: linear-gradient(90deg, #5548e9, #ec787f, #fa8e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section1 h1 span {
+  font-weight: 900;
+}
+.section1 .opening span {
+  background-image: linear-gradient(90deg, #5548e9, #ec787f, #fa8e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section2 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section2 .col {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 360px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.section2 .col:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.1) 0px 10px 10px -5px;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .section1 h1 {
+    font-size: 36pt;
+  }
+  .section2 .col {
+    margin-top: 20px;
+    min-width: 350px;
+  }
+}

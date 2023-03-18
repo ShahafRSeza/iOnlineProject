@@ -1,0 +1,122 @@
+.footer {
+  position: static;
+  bottom: 0;
+  padding: 20px 20px !important;
+  width: 100%;
+  background-color: rgb(21, 21, 21);
+  color: white;
+  padding: 40px 0 10px 0;
+}
+.footer .about {
+  margin-right: 50px;
+}
+
+.footer h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .logo {
+  width: 25%;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.footer p {
+  color: grey;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footerNav {
+  width: 200px;
+}
+
+hr {
+  color: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid white;
+  opacity: 0.15;
+}
+
+.footer .responsiveNav {
+  display: none;
+}
+
+.subscribe {
+  background-color: #ffffff;
+  border-radius: 40px;
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+
+.subscribe span {
+  color: black;
+  margin: auto 5px;
+  transform: translateY(-2px);
+}
+
+.subscribe input {
+  border: none;
+  outline: none;
+  width: 55%;
+  background-color: transparent;
+}
+
+.subscribe button {
+  background-color: black;
+  height: 32px;
+  margin: 6px;
+  position: relative;
+  width: fit-content;
+  line-height: 0;
+}
+
+.subscribeBox {
+  max-width: 350px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .about {
+    margin-right: 0 !important;
+    width: 200px;
+    margin-right: 40px !important;
+  }
+
+  .footer .logo {
+    width: 50%;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+
+  .footer .desktopNav {
+    display: none !important;
+  }
+
+  .footer .responsiveNav {
+    display: block;
+  }
+
+  .footer .rights {
+    text-align: center;
+    font-size: 9pt;
+  }
+
+  .subscribeBox {
+    max-width: 100%;
+  }
+}

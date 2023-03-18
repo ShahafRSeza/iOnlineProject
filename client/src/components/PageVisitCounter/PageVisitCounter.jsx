@@ -13,9 +13,11 @@ function PageVisitCounter() {
   return (
     <div>
       {count > 1 ? (
-        <p>You have visited this page {count} times.</p>
+        <span>You saw this product {count} times</span>
       ) : (
-        <p>It's the first time You watch this Product</p>
+        <span className="text-success">
+          It's the first time You watch this Product
+        </span>
       )}
     </div>
   );

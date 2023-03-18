@@ -21,6 +21,7 @@
   width: 150px;
   height: 150px;
   transition: 0.5s;
+  user-select: none;
 }
 .card:hover .imageBox {
   width: 250px;
@@ -106,6 +107,22 @@
 
 @media only screen and (max-width: 767px) {
   .card {
-    width: 220px;
+    width: 184px;
+  }
+
+  .card .details {
+    margin-top: 90px !important;
+  }
+
+  .card .content .details h2 {
+    font-size: 1em;
+  }
+
+  .card .content .details h3 {
+    font-size: 1em;
+  }
+
+  .overviewBtn {
+    transform: scale(0.9);
   }
 }

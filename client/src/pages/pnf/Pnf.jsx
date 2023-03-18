@@ -5,7 +5,7 @@ function Pnf() {
   return (
     <>
       <div className="container">
-        <div className="pnfPage">
+        <div className="pnfPage mb-5">
           <div className="pnf">
             <p>4</p>
             <img

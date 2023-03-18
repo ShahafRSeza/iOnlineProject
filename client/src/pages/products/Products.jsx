@@ -4,6 +4,7 @@ import { getAllProducts } from "../../services/productsService";
 import "./products.css";
 import { BsSearch } from "react-icons/bs";
 import Loading from "../../components/loading/Loading";
+import NoProductFound from "../../components/noProductFound/NoProductFound";
 
 const Products = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -84,7 +85,41 @@ const Products = ({ category }) => {
           </div>
           <div className="col">
             <div className="products">
-              {products && products.length > 0 ? (
+              {products && products.length > 0
+                ? products
+                    .filter((searched) => {
+                      return search.toLowerCase() === ""
+                        ? searched
+                        : searched.title.toLowerCase().includes(search);
+                    })
+                    .filter((selected) => {
+                      if (
+                        Object.keys(colors).every(
+                          (color) => colors[color] === false
+                        )
+                      ) {
+                        return selected;
+                      } else {
+                        return Object.keys(colors).some(
+                          (color) =>
+                            colors[color] === true &&
+                            selected.color.includes(color)
+                        );
+                      }
+                    })
+                    .map((item) => (
+                      <Card
+                        key={item._id}
+                        _id={item._id}
+                        title={item.title}
+                        image={item.image}
+                        price={item.price}
+                        quantityInStock={item.quantityInStock}
+                      />
+                    ))
+                : null}
+              {products &&
+                products.length > 0 &&
                 products
                   .filter((searched) => {
                     return search.toLowerCase() === ""
@@ -105,20 +140,11 @@ const Products = ({ category }) => {
                           selected.color.includes(color)
                       );
                     }
-                  })
-                  .map((item) => (
-                    <Card
-                      key={item._id}
-                      _id={item._id}
-                      title={item.title}
-                      image={item.image}
-                      price={item.price}
-                      quantityInStock={item.quantityInStock}
-                    />
-                  ))
-              ) : (
-                <p>No Products</p>
-              )}
+                  }).length === 0 && (
+                  <div className="noProducts">
+                    <NoProductFound />
+                  </div>
+                )}
             </div>
           </div>
         </div>

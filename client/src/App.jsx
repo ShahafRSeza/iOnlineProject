@@ -17,6 +17,8 @@ import Cart from "./pages/cart/Cart";
 import Pnf from "./pages/pnf/Pnf";
 import { ToastContainer } from "react-toastify";
 import { errorMsg } from "./services/feedbackService";
+import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 export const TokenContext = React.createContext();
 export const UserContext = React.createContext();
@@ -42,41 +44,50 @@ function App() {
   }, [token]);
 
   return (
-    <UserContext.Provider value={userDetails}>
-      <TokenContext.Provider value={setToken}>
-        <div className="container">
-          <ToastContainer />
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Mac" element={<Products category={"Mac"} />} />
-              <Route path="/iPad" element={<Products category={"iPad"} />} />
-              <Route
-                path="/iPhone"
-                element={<Products category={"iPhone"} />}
-              />
-              <Route path="/Watch" element={<Products category={"Watch"} />} />
-              <Route
-                path="/Accessories"
-                element={<Products category={"Accessories"} />}
-              />
-              <Route path="/products/:id" element={<ProductDetails />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/SignUp" element={<SignUp />} />
-              <Route path="/Login" element={<Login setToken={setToken} />} />
-              <Route path="/Cart" element={<Cart />} />
-              <Route element={<AdminProtected user={userDetails} />}>
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/AddProduct" element={<AddProduct />} />
-                <Route path="/admin/edit/:id" element={<EditProduct />} />
-              </Route>
-              <Route path="*" element={<Pnf />} />
-            </Routes>
-          </Router>
-        </div>
-      </TokenContext.Provider>
-    </UserContext.Provider>
+    <Router>
+      <ScrollToTop />
+      <UserContext.Provider value={userDetails}>
+        <TokenContext.Provider value={setToken}>
+          <div className="app">
+            <div className="content container">
+              <ToastContainer />
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Mac" element={<Products category={"Mac"} />} />
+                <Route path="/iPad" element={<Products category={"iPad"} />} />
+                <Route
+                  path="/iPhone"
+                  element={<Products category={"iPhone"} />}
+                />
+                <Route
+                  path="/Watch"
+                  element={<Products category={"Watch"} />}
+                />
+                <Route
+                  path="/Accessories"
+                  element={<Products category={"Accessories"} />}
+                />
+                <Route path="/products/:id" element={<ProductDetails />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/Login" element={<Login setToken={setToken} />} />
+                <Route path="/Cart" element={<Cart />} />
+                <Route element={<AdminProtected user={userDetails} />}>
+                  <Route path="/admin" element={<Admin />} />
+                  <Route path="/AddProduct" element={<AddProduct />} />
+                  <Route path="/admin/edit/:id" element={<EditProduct />} />
+                </Route>
+                <Route path="*" element={<Pnf />} />
+              </Routes>
+            </div>
+            <footer>
+              <Footer />
+            </footer>
+          </div>
+        </TokenContext.Provider>
+      </UserContext.Provider>
+    </Router>
   );
 }
 

@@ -21,14 +21,18 @@
 
 .text {
   height: 250px;
-  margin: 0 30px;
+  margin: 50px 30px;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   font-weight: 500;
-  z-index: 199;
+  z-index: 1;
   color: white;
+}
+
+.moreInfo {
+  max-width: 380px;
 }
 
 button {
@@ -106,5 +110,9 @@ button:hover span .icon {
     color: rgba(255, 255, 255, 0.3) !important;
     bottom: -30px !important;
     font-size: 60pt !important;
+  }
+
+  .carousel .moreInfo {
+    display: none;
   }
 }

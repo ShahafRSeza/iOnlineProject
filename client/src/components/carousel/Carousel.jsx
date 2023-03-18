@@ -10,8 +10,15 @@ const Carousel = () => {
         <div className="text">
           <h1 className="title">Be Pro. and Beyond.</h1>
           <p>
-            The all-new iPhone 14 Pro & iPhone 14 Pro Max <br />
-            Available now from $999
+            <strong>
+              The all-new iPhone 14 Pro & iPhone 14 Pro Max <br />
+              Available now from $999
+            </strong>
+          </p>
+          <p className="moreInfo">
+            The iPhone 14 Pro/Max series delivers an exceptional user experience
+            with cutting-edge technology and sleek design, making it an
+            excellent choice for those who want the best of the best.
           </p>
           <button onClick={() => navigate("/iphone")}>
             <span>

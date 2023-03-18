@@ -29,13 +29,12 @@
 
 .addProductBtn {
   cursor: pointer;
-  border: 1px solid black;
   background-color: rgb(225, 225, 225);
 }
 
 .addProductBtn:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid transparent;
   background-color: rgb(175, 175, 175);
 }
 
@@ -250,14 +249,25 @@ ul.checkCategory li input[type="checkbox"] {
   color: red;
 }
 
+.sort {
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 767px) {
   .searchInput {
     max-width: 100%;
   }
 
   .checkCategory {
-    width: 100%;
-    padding: 0;
+    display: flex;
+    transform: translateX(-28px) scale(0.9) !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .sort {
+    display: none;
   }
 
   ul.checkCategory li label {
@@ -269,10 +279,14 @@ ul.checkCategory li input[type="checkbox"] {
   }
 
   .adminCard p {
-    font-size: 9pt;
+    font-size: 7pt;
   }
 
   .icon {
     display: none;
+  }
+
+  .adminDetails {
+    gap: 4px !important;
   }
 }

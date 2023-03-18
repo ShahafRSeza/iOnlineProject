@@ -31,13 +31,13 @@ function Cart() {
   }, [cart, originalSum]);
 
   const handleApplyCoupon = () => {
-    if (coupon === "welcome25") {
+    if (coupon === "Sale25") {
       setSum(originalSum * 0.75);
       setApplied(true);
       successMsg("Congratulations! you earn 25% OFF!");
     } else {
       setApplied(false);
-      errorMsg('Coupon was not found.. try "welcome25"');
+      errorMsg('Coupon was not found.. try "Sale25"');
     }
   };
 
@@ -201,9 +201,9 @@ function Cart() {
                       </button>
                     </div>
                   </div>
-                  <hr />
+                  <hr className="hr" />
                   <div>
-                    {applied && coupon === "welcome25" && (
+                    {applied && coupon === "Sale25" && (
                       <>
                         <span className="d-flex justify-content-between mx-2">
                           <p>Subtotal</p>

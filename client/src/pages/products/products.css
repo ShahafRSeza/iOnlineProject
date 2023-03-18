@@ -5,9 +5,16 @@
   align-items: center;
 }
 
+.sticky {
+  position: sticky;
+  top: 30px;
+  height: fit-content;
+}
+
 .productsTitle {
-  font-size: 40pt;
+  font-size: 28pt !important;
   font-weight: 700;
+  width: fit-content;
   background: -webkit-linear-gradient(60deg, #c41a55, #1094e4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,6 +75,7 @@
 .productImage {
   padding: 30px;
   border-radius: 10px !important;
+  user-select: none;
 }
 
 .magnifier {
@@ -246,7 +254,29 @@
   margin-bottom: 30px;
 }
 
+.moreProducts {
+  border-top: 2px solid rgb(243, 243, 243);
+  margin-top: 50px;
+}
+
+.moreProducts h4 {
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+  .sticky {
+    position: unset;
+    height: fit-content;
+  }
+}
+
 @media only screen and (max-width: 767px) {
+  .sticky {
+    position: unset;
+    height: fit-content;
+  }
+
   .policy span {
     display: inline;
     font-size: 8pt;
@@ -259,5 +289,14 @@
 
   .searchInput {
     max-width: 100%;
+  }
+
+  .selectColors {
+    gap: 5px !important;
+  }
+
+  .selectColors label {
+    display: inline-block;
+    width: fit-content !important;
   }
 }
