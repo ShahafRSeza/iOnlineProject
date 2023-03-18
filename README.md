@@ -8,7 +8,7 @@ soon
 
 ## Screenshots
 
-soon
+![Thumbnail](https://i.postimg.cc/QdLSGRGj/Untitled-1.jpg)
 
 ## Stacks
 
@@ -18,6 +18,11 @@ soon
 - MongoDB
 - React
 
+## Dependencies used
+
+**Frontend**: React-icons, React-router-dom, React-magnifier, React-confirm-alert, Tostify, Formik, Yup and JWT Decode, Web-vitals.
+**Backend**: Bcrypt, Joi, JsonWebToken, Lodash, Axios, Cors, Dotenv, MongoDB and Mongoose.
+
 ### Clone Repository
 
 ```
@@ -26,13 +31,14 @@ git clone https://github.com/ShahafRSeza/iOnlineProject.git
 
 ## Client Installation
 
+Open a new terminal and insert:
 ```
 cd iOnlineProject
 cd client
-npm install or yarn install
+npm install
 ```
 
-#### Add .env.local file to root client directory
+#### Add .env. to local file to root client directory
 
 ```
 REACT_APP_API = 
@@ -49,16 +55,16 @@ npm start
 Open a new terminal and insert:
 ```
 cd server
-npm install or yarn install
+npm install
 ```
 
 #### Add .env file to root server directory
 
 ```
 NODE_ENV=development
-PORT= 
-dataBase= 
-secretKey= 
+PORT= // PORT NUMBER
+dataBase= // Database-url
+secretKey= // String
 ```
 
 ### Run Server 
